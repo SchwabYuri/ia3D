@@ -9,11 +9,11 @@ const perguntas = [
         alternativas:["Sim","Não"]
     },
     {
-        enunciado: "Você acha que ela pode se tornar um perigo no futuro?",
+        enunciado: "Você acha que ela pode ser um problema no futuro?",
         alternativas:["Sim","Não"]
     },
     {
-        enunciado: "Você acha que as pessoas estão muito dependentes da IA?",
+        enunciado: "A IA pode se tornar um perigo pra humanidade?",
         alternativas:["Sim","Não"]
     }
 ]
