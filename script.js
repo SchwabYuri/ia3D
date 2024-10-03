@@ -6,15 +6,37 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 const perguntas = [
     {
         enunciado: "Você gosta da ideia de Inteligência Artificial?",
-        alternativas:["Sim","Não"]
+        alternativas:[{
+            texto:"Sim",
+            afirmativa:"Afirmativa da alternativa1"},
+            {
+                texto:"Não",
+                afirmativa: "Afirmativa da alternativa 2"
+            }
+        ]
+
     },
     {
-        enunciado: "Você acha que ela pode ser um problema no futuro?",
-        alternativas:["Sim","Não"]
+        enunciado: "Você acha que estamos muito dependentes da IA?",
+        alternativas:[{
+            texto:"Sim",
+            afirmativa:"Afirmativa da alternativa1"},
+            {
+                texto:"Não",
+                afirmativa: "Afirmativa da alternativa 2"
+            }
+        ]
     },
     {
-        enunciado: "A IA pode se tornar um perigo pra humanidade?",
-        alternativas:["Sim","Não"]
+        enunciado: "Ela pode se tornar um perigo futuro?",
+        alternativas:[{
+            texto:"Sim",
+            afirmativa:"Afirmativa da alternativa1"},
+            {
+                texto:"Não",
+                afirmativa: "Afirmativa da alternativa 2"
+            }
+        ]
     }
 ]
 
@@ -29,7 +51,12 @@ function mostraPergunta(){
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativa){
         const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa;
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click",function(){
+            posicao++;
+            mostraPergunta();
+
+        })
         caixaAlternativa.appendChild(botaoAlternativas);
     }
 }
