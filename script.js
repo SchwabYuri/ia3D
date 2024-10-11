@@ -6,15 +6,15 @@ const textoResultado = document.querySelector('texto-resultado');
 
 const perguntas = [
     {
-        enunciado: "Você gosta da ideia de Inteligência Artificial?",
+        enunciado: "Você gosta da ideia da Inteligência Artificial?",
         alternativas: [
             {
                 texto: "Sim",
-                afirmativa: "Afirmativa da alternativa 1"
+                afirmação: "Você gosta da ideia da Inteligência Artificial"
             },
             {
                 texto: "Não",
-                afirmativa: "Afirmativa da alternativa 2"
+                afirmação: "Você gosta não da ideia da Inteligência Artificial"
             }
         ]
     },
@@ -23,11 +23,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim",
-                afirmativa: "Afirmativa da alternativa 1"
+                afirmação: "Estamos muito dependentes da IA"
             },
             {
                 texto: "Não",
-                afirmativa: "Afirmativa da alternativa 2"
+                afirmação: "Não estamos muito dependentes da IA"
             }
         ]
     },
@@ -36,11 +36,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim",
-                afirmativa: "Afirmativa da alternativa 1"
+                afirmação: "Ela se tornará um perigo futuro"
             },
             {
                 texto: "Não",
-                afirmativa: "Afirmativa da alternativa 2"
+                afirmação: "Ela não se tornará um perigo futuro"
             }
         ]
     }
@@ -69,8 +69,8 @@ function mostraAlternativas() {
     }
 }
 function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmativa;
-    respostas += afirmacoes; respostas = resposta + afirmativa
+    const afirmacoes = opcaoSelecionada.afirmação;
+    respostas += afirmacoes + " ";
     posicao++;
     mostraPergunta();
 }
